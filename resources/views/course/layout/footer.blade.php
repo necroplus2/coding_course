@@ -5,7 +5,7 @@
                   <div class="col-lg-4 col-md-6">
                      <a href="#"><img src="images/course/footer_logo.png" alt="#" /></a>
                      <ul class="contact_information">
-                        <li><span><img src="images/course/location_icon.png" alt="#" /></span><span class="text_cont">London 145<br>United Kingdom</span></li>
+                        <li><span><img src="images/course/location_icon.png" alt="#" /></span><span class="text_cont">Tangerang<br>Cimone</span></li>
                         <li><span><img src="images/course/phone_icon.png" alt="#" /></span><span class="text_cont">987 654 3210<br>987 654 3210</span></li>
                         <li><span><img src="images/course/mail_icon.png" alt="#" /></span><span class="text_cont">demo@gmail.com<br>support@gmail.com</span></li>
                      </ul>

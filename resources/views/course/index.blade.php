@@ -27,9 +27,9 @@
                   </div>
                   <div class="col-md-5">
                      <div class="full slider_cont_section">
-                        <h4>More Featured in</h4>
-                        <h3>Jack Blogger</h3>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look</p>
+                        <h4>Kursus Koding Online Sheeten New bersama</h4>
+                        <h3>Muhammad Irwan</h3>
+                        <p>Kami siap membantu anda yang kesulitan untuk belajar koding, kami berusaha agar bisa menciptakan programmer yang handal dan kreatif dengan membuka kursus gratis ini kami berharap semua kalangan masyarakat dapat belajar koding. Dunia saat ini sedang membutuhkan peradaban teknologi, sudah pasti programmer menjadi incaran para pengusaha karena gaji yang besar. Hampir di seluruh indonesia pencetak programmer handal dan kreatif sangat sedikit, maka dari itu kami membuka kursus gratis berbasis web. Tingkatkan prestasi belajarmu dan dapatkan bimbingan dari pengajar terbaik.</p>
                         <div class="button_section">
                            <a href="about.html">Read More</a>
                            <a href="contact.html">Contact Us</a>
@@ -46,7 +46,7 @@
                <div class="row">
                   <div class="col-md-12">
                      <div class="heading">
-                        <h3>About <span class="orange_color">Us</span></h3>
+                        <h3>Tentang <span class="orange_color">Kami</span></h3>
                      </div>
                   </div>
                </div>
@@ -56,9 +56,9 @@
                   </div>
                   <div class="col-md-6">
                      <div class="full blog_cont">
-                        <h4>The biggest and most awesome camera  of  year</h4>
-                        <h5>MAY 14 2019 5 READ</h5>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                        <h4>Awal web kursus ini terbentuk</h4>
+                        <h5>31 Desember 2022</h5>
+                        <p>Di penghujung akhir tahun 2022 tim kami membuat kursus online ini sesuai dengan namanya sheeten new yaitu lembaran baru. Dimana kebanyakan orang sibuk dengan datangnya tahun baru, maka kami sebaliknya sibuk memikirkan agar bangsa ini bisa berkembang di dunia teknologi khususnya programmer yang menjadi perhatian kami. Banyak anak bangsa yang kami lihat potensinya bisa berkembang lebih dari yang kami perkirakan. Kami yakin dengan belajar koding bangsa ini bisa menjadi salah satu bangsa yang akan di segani, di takuti dan tidak dipandang sebelah mata karena teknologi nya, maka kami membuka lembaran baru untuk belajar koding gratis .</p>
                      </div>
                   </div>
                </div>
@@ -68,9 +68,9 @@
                   </div>
                   <div class="col-md-6">
                      <div class="full blog_cont">
-                        <h4>What 3 years of android taught me the hard way</h4>
-                        <h5>MAY 19 2019  5 READ</h5>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                        <h4>Filosopi, Visi dan Misi Kami</h4>
+                        <h5>Kursus Koding Online Sheeten New </h5>
+                        <p>Jadilah yang terbaik dengan membuka lembaran baru, semangat baru agar memancarkan makna keinginan untuk selalu belajar menjadi yang terbaik(filosopi). Menjadi kursus online pencetak generasi berprestasi berakhlak mulia untuk menghadapi kemajuan dan persaingan dunia teknologi dengan tata cara yang terbaik(visi). Melayani, mengembangkan, dan menyediakan program kursus online yang berkualitas(misi).</p>
                      </div>
                   </div>
                </div>
@@ -90,7 +90,7 @@
                <div class="row">
                   <div class="col-md-12">
                      <div class="heading">
-                        <h3>Marketing</h3>
+                        <h3>Menthor dan Kelas Belajar</h3>
                      </div>
                   </div>
                </div>
@@ -100,131 +100,12 @@
                   </div>
                   <div class="col-md-6">
                      <div class="full blog_cont">
-                        <h3 class="white_font">Where can I get some</h3>
-                        <h5 class="grey_font">March 19 2019 5 READ</h5>
-                        <p class="white_font">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined g to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator..</p>
+                        <h3 class="white_font">Menthor yang berkualitas dan kelas yang fleksibel</h3>
+                        <h5 class="grey_font">Kursus Koding Online Sheeten New</h5>
+                        <p class="white_font">Kami menyediakan kelas belajar yang menyenangkan, banyak pilihan kelas yang bisa kamu pilih. Untuk pemula juga bisa mengikuti kursus koding ini dengan pilhan kelas terendah. Kami juga menyediakan para manthor terbaik dari universitas-universitas ternama, sehingga kami yakin bahwa web kursus ini mampu untuk menciptakan programmer yang handal dan kreatif. </p>
                      </div>
                   </div>
                </div>
             </div>
          </div>
-         <!-- end section -->
-         <!-- section -->
-         <section class="layout_padding">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-12">
-                     <div class="heading" style="padding-left: 15px;padding-right: 15px;">
-                        <h4 style="border-bottom: solid #333 1px;">Comments / 2</h4>
-                     </div>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col-md-12">
-                     <div class="full comment_blog_line">
-                        <div class="row">
-                           <div class="col-md-1">
-                              <img src="images/course/c_1.png" alt="#" />
-                           </div>
-                           <div class="col-md-9">
-                              <div class="full contact_text">
-                                 <h3>Veniam</h3>
-                                 <h4>Posted on Jan 10 / 2017 at 06:53 am</h4>
-                                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet 
-                                    dolore magna aliquam erat volutpat.
-                                 </p>
-                              </div>
-                           </div>
-                           <div class="col-md-2">
-                              <a class="reply_bt" href="#">Reply</a>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="full comment_blog_line">
-                        <div class="row">
-                           <div class="col-md-1">
-                              <img src="images/course/c_2.png" alt="#" />
-                           </div>
-                           <div class="col-md-9">
-                              <div class="full contact_text">
-                                 <h3>Jack</h3>
-                                 <h4>Posted on Jan 10 / 2017 at 06:53 am</h4>
-                                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet 
-                                    dolore magna aliquam erat volutpat.
-                                 </p>
-                              </div>
-                           </div>
-                           <div class="col-md-2">
-                              <a class="reply_bt" href="#">Reply</a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="row margin_top_30">
-                  <div class="col-md-12 margin_top_30">
-                     <div class="heading" style="padding-left: 15px;padding-right: 15px;">
-                        <h4>Post : Your Comment</h4>
-                     </div>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col-md-12">
-                     <div class="full comment_form">
-                        <form action="index.html">
-                           <fieldset>
-                              <div class="col-md-12">
-                                 <div class="row">
-                                    <div class="col-md-6">
-                                       <input type="text" name="name" placeholder="Name" required="#" />
-                                       <input type="email" name="email" placeholder="Email" required="#" />
-                                    </div>
-                                    <div class="col-md-6">
-                                       <textarea placeholder="Comment"></textarea>
-                                    </div>
-                                 </div>
-                                 <div class="row margin_top_30">
-                                    <div class="col-md-12">
-                                       <div class="center">
-                                          <button>Send</button>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </fieldset>
-                        </form>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
-         <!-- end section -->
-         <!-- section --> 
-         <div class="section layout_padding blog_blue_bg light_silver">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-8 offset-md-2">
-                     <div class="heading">
-                        <h3>Blog</h3>
-                     </div>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col-md-8 offset-md-2">
-                     <div class="full">
-                        <div class="big_blog">
-                           <img class="img-responsive" src="images/course/blog_1.png" alt="#" />
-                        </div>
-                        <div class="blog_cont_2">
-                           <h3>Why do we use it</h3>
-                           <p class="sublittle">March 19 2019  5 READ</p>
-                           <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters as opposed to using Content here content here making..</p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- end section -->
-        
 @endsection
