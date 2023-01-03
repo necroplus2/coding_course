@@ -9,15 +9,15 @@
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
-                            <a href="#">
+                            <a href="/dashboard">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
                         <li>
-                            <a href="chart.html">
+                            <a href="/dashboard/kategori">
                                 <i class="fas fa-chart-bar"></i>Kategori</a>
                         </li>
                         <li>
-                            <a href="table.html">
+                            <a href="/dashboard/kelas">
                                 <i class="fas fa-table"></i>Kelas</a>
                         </li>
                             </ul>

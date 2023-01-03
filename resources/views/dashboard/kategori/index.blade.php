@@ -11,7 +11,7 @@
 
                       <h4 class="mb-3">Kategori</h4>
   
-                      <a href="" class="btn btn-primary">Tambah Data</a>
+                      <a href="/dashboard/kategori/tambah" class="btn btn-primary">Tambah Data</a>
                       <div class="table-responsive table--no-card m-b-30 mt-3">
                         <table class="table table-borderless table-striped table-earning">
                             <thead>

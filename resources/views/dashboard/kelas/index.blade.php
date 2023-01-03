@@ -11,7 +11,7 @@
 
                       <h4 class="mb-3">Kelas Saat Ini</h4>
   
-                      <a href="" class="btn btn-primary">Tambah Data</a>
+                      <a href="/dashboard/kelas/tambah" class="btn btn-primary">Tambah Data</a>
                       <div class="table-responsive table--no-card m-b-30 mt-3">
                         <table class="table table-borderless table-striped table-earning">
                             <thead>
