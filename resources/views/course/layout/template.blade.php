@@ -13,15 +13,16 @@
       <meta name="description" content="">
       <meta name="author" content="">
       <!-- bootstrap css -->
-      <link rel="stylesheet" href="css/course/bootstrap.min.css">
+      <link rel="stylesheet" href="{{ asset('css/course/bootstrap.min.css') }}">
+      {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> --}}
       <!-- style css -->
-      <link rel="stylesheet" href="css/course/style.css">
+      <link rel="stylesheet" href="{{ asset('css/course/style.css') }}">
       <!-- Responsive-->
-      <link rel="stylesheet" href="css/course/responsive.css">
+      <link rel="stylesheet" href="{{ asset('css/course/responsive.css') }}">
       <!-- fevicon -->
       <link rel="icon" href="images/course/fevicon.png" type="image/gif" />
       <!-- Scrollbar Custom CSS -->
-      <link rel="stylesheet" href="css/course/jquery.mCustomScrollbar.min.css">
+      <link rel="stylesheet" href="{{ asset('css/course/jquery.mCustomScrollbar.min.css') }}">
       <!-- Tweaks for older IEs-->
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -42,13 +43,13 @@
       @include('course.layout.footer')
 
       <!-- Javascript files-->
-      <script src="js/course/jquery.min.js"></script>
-      <script src="js/course/popper.min.js"></script>
-      <script src="js/course/bootstrap.bundle.min.js"></script>
-      <script src="js/course/jquery-3.0.0.min.js"></script>
-      <script src="js/course/plugin.js"></script>
+      <script src="{{ asset('js/course/jquery.min.js') }}"></script>
+      <script src="{{ asset('js/course/popper.min.js') }}"></script>
+      <script src="{{ asset('js/course/bootstrap.bundle.min.js') }}"></script>
+      {{-- <script src="{{ asset('js/course/jquery-3.0.0.min.js') }}"></script> --}}
+      <script src="{{ asset('js/course/plugin.js') }}"></script>
       <!-- Scrollbar Js Files -->
-      <script src="js/course/jquery.mCustomScrollbar.concat.min.js"></script>
-      <script src="js/course/custom.js"></script>
+      <script src="{{ asset('js/course/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+      <script src="{{ asset('js/course/custom.js') }}"></script>
    </body>
 </html>

@@ -11,7 +11,8 @@
 
                       <h4 class="mb-3">Kelas Saat Ini</h4>
   
-                      <a href="/dashboard/kelas/tambah" class="btn btn-primary">Tambah Data</a>
+                      <a href="/dashboard/module/create" class="btn btn-primary">Tambah Data</a>
+
                       <div class="table-responsive table--no-card m-b-30 mt-3">
                         <table class="table table-borderless table-striped table-earning">
                             <thead>
@@ -24,36 +25,29 @@
                                 </tr>
                             </thead>
                             <tbody>
+                              @foreach($kelass as $kelas)
                                 <tr>
-                                    <td>1</td>
-                                    <td>100398</td>
-                                    <td>iPhone X 64Gb Grey</td>
-                                    <td>$999.00</td>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $kelas->judul_kelas }}</td>
+                                    <td>{{ $kelas->nama_kategori }}</td>
+                                    <td>{{ $kelas->nama_lengkap }}</td>
                                     <td>
-                                      <a href="" class="btn btn-warning btn-sm">Edit</a>
-                                      <a href="" class="btn btn-outline-danger btn-sm">Delete</a>
+
+                                      @if(auth()->user()->id == $kelas->menthor_id || auth()->user()->status == 'administrator')
+                                      <a href="/dashboard/module/{{ $kelas->id }}/edit" class="btn btn-warning btn-sm">Edit</a>
+                                      @endif
+
+                                      @if(auth()->user()->status == 'administrator')
+                                      <form action="/dashboard/module/{{ $kelas->id }}" method="post" style="display: inline">
+                                        @csrf
+                                        @method('delete')
+                                        <button type="submit" class="btn btn-outline-danger btn-sm" onclick="confirm('Yakin Menghapus ?')">Delete</button>
+                                      </form>
+                                      @endif
+
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>100397</td>
-                                    <td>Samsung S8 Black</td>
-                                    <td>$999.00</td>
-                                    <td>
-                                      <a href="" class="btn btn-warning btn-sm">Edit</a>
-                                      <a href="" class="btn btn-outline-danger btn-sm">Delete</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>100396</td>
-                                    <td>Game Console Controller</td>
-                                    <td>$999.00</td>
-                                    <td>
-                                      <a href="" class="btn btn-warning btn-sm">Edit</a>
-                                      <a href="" class="btn btn-outline-danger btn-sm">Delete</a>
-                                    </td>
-                                </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

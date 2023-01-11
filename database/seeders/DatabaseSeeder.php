@@ -24,6 +24,12 @@ class DatabaseSeeder extends Seeder
         ]);
         \App\Models\User::create([
             'nama_lengkap' => fake()->name(),
+            'email' => 'menthor1@gmail.com',
+            'password' => bcrypt('admin'),
+            'status' => 'menthor',
+        ]);
+        \App\Models\User::create([
+            'nama_lengkap' => fake()->name(),
             'email' => 'menthor2@gmail.com',
             'password' => bcrypt('admin'),
             'status' => 'menthor',
@@ -34,6 +40,15 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('admin'),
             'status' => 'user',
         ]);
+
+        \App\Models\Category::create([
+            'nama_kategori' => 'Web Programming'
+        ]);
+        \App\Models\Category::create([
+            'nama_kategori' => 'Data Science'
+        ]);
+
+        
 
         // \App\Models\User::factory(3)->create();
     }

@@ -3,11 +3,11 @@
             <div class="container">
                <div class="row">
                   <div class="col-lg-4 col-md-6">
-                     <a href="#"><img src="images/course/footer_logo.png" alt="#" /></a>
+                     <a href="#"><h2 class= "text-white">Course Irwan</h2></a>
                      <ul class="contact_information">
                         <li><span><img src="images/course/location_icon.png" alt="#" /></span><span class="text_cont">Tangerang<br>Cimone</span></li>
                         <li><span><img src="images/course/phone_icon.png" alt="#" /></span><span class="text_cont">987 654 3210<br>987 654 3210</span></li>
-                        <li><span><img src="images/course/mail_icon.png" alt="#" /></span><span class="text_cont">demo@gmail.com<br>support@gmail.com</span></li>
+                        <li><span><img src="images/course/mail_icon.png" alt="#" /></span><span class="text_cont">courseirwan@gmail.com<br>sheetennew@gmail.com</span></li>
                      </ul>
                      <ul class="social_icon">
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -15,68 +15,9 @@
                         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                         <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                      </ul>
-                  </div>
-                  <div class="col-lg-2 col-md-6">
-                     <div class="footer_links">
-                        <h3>Quick link</h3>
-                        <ul>
-                           <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Home</a></li>
-                           <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Features</a></li>
-                           <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Evens</a></li>
-                           <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Markrting</a></li>
-                           <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Blog</a></li>
-                           <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Testimonial</a></li>
-                           <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Contact</a></li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6">
-                     <div class="footer_links">
-                        <h3>Instagram</h3>
-                        <ol>
-                           <li><img class="img-responsive" src="images/course/footer_blog.png" alt="#" /></li>
-                           <li><img class="img-responsive" src="images/course/footer_blog.png" alt="#" /></li>
-                           <li><img class="img-responsive" src="images/course/footer_blog.png" alt="#" /></li>
-                           <li><img class="img-responsive" src="images/course/footer_blog.png" alt="#" /></li>
-                        </ol>
-                     </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6">
-                     <div class="footer_links">
-                        <h3>Contact us</h3>
-                        <form action="index.html">
-                           <fieldset>
-                              <div class="field">
-                                 <input type="text" name="name" placeholder="Your Name" required="" />
-                              </div>
-                              <div class="field">
-                                 <input type="email" name="email" placeholder="Email" required="" />
-                              </div>
-                              <div class="field">
-                                 <input type="text" name="subject" placeholder="Subject" required="" />
-                              </div>
-                              <div class="field">
-                                 <textarea placeholder="Message"></textarea>
-                              </div>
-                              <div class="field">
-                                 <div class="center">
-                                    <button class="reply_bt">Send</button>
-                                 </div>
-                              </div>
-                           </fieldset>
-                        </form>
-                     </div>
-                  </div>
+                  </div>      
                </div>
-            </div>
+            </div>    
          </footer>
-         <div class="cpy">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-12">
-                     <p>Copyright © 2019 Design by <a href="https://html.design/">Free Html Templates</a></p>
-                  </div>
-               </div>
-            </div>
-         </div>
+         
          <!-- end footer -->

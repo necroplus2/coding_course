@@ -1,3 +1,4 @@
+{{-- {{ dd(Str::substr("http://127.0.0.1:8000/dashboard/kategori/1/edit", 41, 1)) }} --}}
 @extends('dashboard.layout.template')
 
 @section('container')
@@ -20,12 +21,14 @@
 
                         <h4 class="mb-3">Ubah Kategori </h4>
                         <hr>
-                        <form action="" method="post" novalidate="novalidate">
+                        <form action="/dashboard/category/{{ $kategori->id }}" method="post">
+                            @csrf
+                            @method('put')
+
 
                             <div class="form-group">
                                 <label for="cc-payment" class="control-label mb-1">Nama Kategori</label>
-                                <input id="cc-pament" name="cc-payment" type="text" class="form-control"
-                                    aria-required="true" aria-invalid="false" value="">
+                                <input id="cc-pament" name="nama_kategori" type="text" class="form-control" value="{{ $kategori->nama_kategori }}">
                             </div>
 
                             <div>

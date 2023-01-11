@@ -6,8 +6,8 @@
                <div class="col-lg-3 logo_section">
                    <div class="full">
                        <div class="center-desk">
-                           <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="#"></a>
-                           </div>
+                           <div class="logo"> <h1 class="mt-5">Irwan Course</h1>
+                           </div> 
                        </div>
                    </div>
                </div>
@@ -23,13 +23,7 @@
                                        <a href="/about">About</a>
                                    </li>
                                    <li>
-                                       <a href="/marketing">Marketing</a>
-                                   </li>
-                                   <li>
-                                       <a href="/blog">Blog</a>
-                                   </li>
-                                   <li>
-                                       <a href="/contact">Contact us</a>
+                                       <a href="/kelas">Kelas</a>
                                    </li>
                                    @auth
                                        @if (auth()->user()->status == 'administrator' || auth()->user()->status == 'menthor')

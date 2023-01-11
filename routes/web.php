@@ -1,7 +1,14 @@
 <?php
 
-use App\Http\Controllers\UserController;
+use App\Models\Kelas;
+use App\Models\Module;
+use App\Models\Kategori;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\KelasController;
+use App\Http\Controllers\ModuleController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\KategoriController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,71 +36,34 @@ Route::get('/about', function() {
 });
 // End Route ABOUT
 
-// Route BLOG
-Route::get('/blog', function() {
-    return view('course.blog');
+// Route KELAS
+Route::get('/kelas', function() {
+    return view('course.kelas', [
+        'kelas' => Module::all()
+    ]);
 });
-// End Route BLOG
-
-// Route CONTACT
-Route::get('/contact', function() {
-    return view('course.contact');
-});
-// End Route CONTACT
-
-// Route MARKETING
-Route::get('/marketing', function() {
-    return view('course.marketing');
-});
-// End Route MARKETING
+// End Route KELAS
 
 // Route DASHBOARD
 Route::get('/dashboard', function() {
     return view('dashboard.index');
-});
+})->middleware('auth')->middleware('is.admin');
 // End Route DASHBOARD
 
 // Route DASHBOARD KELAS
-Route::get('/dashboard/kelas', function() {
-    return view('dashboard.kelas.index');
-});
+Route::resource('/dashboard/module', ModuleController::class);
+// Route::resource('/dashboard/module', ModuleController::class)->middleware('auth')->middleware('is.admin');
 // End Route DASHBOARD KELAS
 
-// Route DASHBOARD KELAS TAMBAH
-Route::get('/dashboard/kelas/tambah', function() {
-    return view('dashboard.kelas.tambah');
-});
-// End Route DASHBOARD KELAS TAMBAH
-
-// Route DASHBOARD KELAS UBAH
-Route::get('/dashboard/kelas/ubah', function() {
-    return view('dashboard.kelas.ubah');
-});
-// End Route DASHBOARD KELAS UBAH
-
 // Route DASHBOARD KATEGORI
-Route::get('/dashboard/kategori', function() {
-    return view('dashboard.kategori.index');
-});
+Route::resource('/dashboard/category', CategoryController::class)->middleware('auth')->middleware('is.admin');
 // End Route DASHBOARD KATEGORI
-
-// Route DASHBOARD KATEGORI TAMBAH
-Route::get('/dashboard/kategori/tambah', function() {
-    return view('dashboard.kategori.tambah');
-});
-// Route DASHBOARD KATEGORI TAMBAH
-
-// Route DASHBOARD KATEGORI UBAH
-Route::get('/dashboard/kategori/ubah', function() {
-    return view('dashboard.kategori.ubah');
-});
-// Route DASHBOARD KATEGORI UBAH
 
 // Route MASUK
 Route::get('/masuk', function() {
     return view('masuk');
 })->middleware('guest');
-Route::post('/masuk', [UserController::class, 'masuk']);
+Route::post('/masuk', [UserController::class, 'masuk'])->name('login');
 // End Route MASUK
 
 // Route LOGOUT
@@ -103,6 +73,8 @@ Route::post('/logout', [UserController::class, 'logout']);
 // Route DAFTAR
 Route::get('/daftar', function() {
     return view('daftar');
-});
+})->middleware('guest');
 Route::post('/daftar', [UserController::class, 'daftar']);
 // End Route DAFTAR
+
+Route::get('/blog/{module:id}', [ModuleController::class, 'show']);

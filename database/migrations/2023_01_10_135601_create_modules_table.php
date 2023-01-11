@@ -13,8 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('kategoris', function (Blueprint $table) {
+        Schema::create('modules', function (Blueprint $table) {
             $table->id();
+            $table->string('judul_kelas');
+            $table->unsignedBigInteger('kategori_id');
+            $table->foreign('kategori_id')->references('id')->on('categories');
+            $table->string('isi_materi');
+            $table->unsignedBigInteger('menthor_id');
+            $table->foreign('menthor_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
@@ -26,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kategoris');
+        Schema::dropIfExists('modules');
     }
 };

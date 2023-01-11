@@ -20,12 +20,11 @@
 
                         <h4 class="mb-3">Tambah Kategori </h4>
                         <hr>
-                        <form action="" method="post" novalidate="novalidate">
-
+                        <form action="/dashboard/category" method="post">
+                            @csrf
                             <div class="form-group">
                                 <label for="cc-payment" class="control-label mb-1">Nama Kategori</label>
-                                <input id="cc-pament" name="cc-payment" type="text" class="form-control"
-                                    aria-required="true" aria-invalid="false" value="">
+                                <input id="cc-pament" name="nama_kategori" type="text" class="form-control" value="">
                             </div>
 
                             <div>

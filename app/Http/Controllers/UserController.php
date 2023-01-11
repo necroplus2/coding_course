@@ -21,9 +21,7 @@ class UserController extends Controller
             return redirect()->intended('home');
         }
  
-        return back()->withErrors([
-            'email' => 'email atau password salah',
-        ])->onlyInput('email');
+        return back()->with('loginSalah', 'Maaf, Silahkan cek email atau password anda dengan benar');
     }
 
     public function logout(Request $request) {

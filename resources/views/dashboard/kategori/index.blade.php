@@ -11,45 +11,31 @@
 
                       <h4 class="mb-3">Kategori</h4>
   
-                      <a href="/dashboard/kategori/tambah" class="btn btn-primary">Tambah Data</a>
+                      <a href="/dashboard/category/create" class="btn btn-primary">Tambah Data</a>
                       <div class="table-responsive table--no-card m-b-30 mt-3">
                         <table class="table table-borderless table-striped table-earning">
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Kode Kategori</th>
                                     <th>Nama Kategori</th>
                                     <th>Opsi</th>
                                 </tr>
                             </thead>
                             <tbody>
+                              @foreach($kategoris as $kategori)
                                 <tr>
-                                    <td>1</td>
-                                    <td>100398</td>
-                                    <td>iPhone X 64Gb Grey</td>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $kategori->nama_kategori }}</td>
                                     <td>
-                                      <a href="" class="btn btn-warning btn-sm">Edit</a>
-                                      <a href="" class="btn btn-outline-danger btn-sm">Delete</a>
+                                      <a href="/dashboard/category/{{ $kategori->id }}/edit" class="btn btn-warning btn-sm">Edit</a>
+                                      <form action="/dashboard/category/{{ $kategori->id }}" method="post" style="display: inline">
+                                        @csrf
+                                        @method('delete')
+                                        <button type="submit" class="btn btn-outline-danger btn-sm" onclick="confirm('Yakin Menghapus ?')">Delete</button>
+                                      </form>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>100397</td>
-                                    <td>Samsung S8 Black</td>
-                                    <td>
-                                      <a href="" class="btn btn-warning btn-sm">Edit</a>
-                                      <a href="" class="btn btn-outline-danger btn-sm">Delete</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>100396</td>
-                                    <td>Game Console Controller</td>
-                                    <td>
-                                      <a href="" class="btn btn-warning btn-sm">Edit</a>
-                                      <a href="" class="btn btn-outline-danger btn-sm">Delete</a>
-                                    </td>
-                                </tr>
+                              @endforeach
                             </tbody>
                         </table>
                     </div>

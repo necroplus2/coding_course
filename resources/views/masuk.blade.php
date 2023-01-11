@@ -52,6 +52,11 @@
                                 {{ session('sukses') }}
                             </div>
                             @endif
+                            @if(session()->has('loginSalah'))
+                            <div class="alert alert-danger" role="alert">
+                                {{ session('loginSalah') }}
+                            </div>
+                            @endif
                             <form action="/masuk" method="post">
                                 @csrf
                                 <div class="form-group">

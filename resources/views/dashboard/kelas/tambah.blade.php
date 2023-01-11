@@ -20,31 +20,27 @@
 
                         <h4 class="mb-3">Tambah Kelas</h4>
                         <hr>
-                        <form action="" method="post" novalidate="novalidate">
-
+                        <form action="/dashboard/module" method="post">
+                            @csrf
                             <div class="form-group">
                                 <label for="cc-payment" class="control-label mb-1">Judul Kelas</label>
-                                <input id="cc-pament" name="cc-payment" type="text" class="form-control"
-                                    aria-required="true" aria-invalid="false" value="">
+                                <input id="cc-pament" name="judul_kelas" type="text" class="form-control" value="">
                             </div>
 
                             <div class="form-group">
                                 <label for="cc-payment" class="control-label mb-1">Materi</label>
-                                <input id="materi" type="hidden" name="materi" value="">
-                                <trix-editor input="materi"></trix-editor>                        
+                                <textarea class="form-control" id="materi" name="isi_materi"></textarea>
                             </div>
 
 
                             <div class="row form-group">
                                 <div class="col-12 col-md-12">
                                     <label for="cc-payment" class="control-label mb-1">Kategori</label>
-                                    <select name="selectSm" id="SelectLm" class="form-control-sm form-control">
-                                        <option value="0">Please select</option>
-                                        <option value="1">Option #1</option>
-                                        <option value="2">Option #2</option>
-                                        <option value="3">Option #3</option>
-                                        <option value="4">Option #4</option>
-                                        <option value="5">Option #5</option>
+                                    <select name="kategori_id" id="SelectLm" class="form-control-sm form-control">
+                                        <option disabled selected>Pilih Kategori Materi</option>
+                                        @foreach($kategoris as $kategori)
+                                        <option value="{{ $kategori->id }}">{{ $kategori->nama_kategori }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
@@ -52,13 +48,11 @@
                             <div class="row form-group">
                                 <div class="col-12 col-md-12">
                                     <label for="cc-payment" class="control-label mb-1">Menthor</label>
-                                    <select name="selectSm" id="SelectLm" class="form-control-sm form-control">
-                                        <option value="0">Please select</option>
-                                        <option value="1">Option #1</option>
-                                        <option value="2">Option #2</option>
-                                        <option value="3">Option #3</option>
-                                        <option value="4">Option #4</option>
-                                        <option value="5">Option #5</option>
+                                    <select name="menthor_id" id="SelectLm" class="form-control-sm form-control">
+                                        <option disabled selected>Pilih Menthor</option>
+                                        @foreach($menthor as $mentor)
+                                        <option value="{{ $mentor->id }}">{{ $mentor->nama_lengkap }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
