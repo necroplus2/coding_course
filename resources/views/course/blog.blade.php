@@ -7,7 +7,7 @@
        <div class="row">
           <div class="col-md-12">
              <div class="Blogheading">
-                <h3>Kelas HTML Dasar </h3>
+                <h3>{{ $kelas->judul_kelas }}</h3>
              </div>
           </div>
        </div>
@@ -28,7 +28,7 @@
                       <div class="blog_cont_2">
                          <h3>{{ $kelas->judul_kelas }}</h3>
                          <p class="sublittle">{{ $kelas->created_at }}</p>
-                         <p>{{ $kelas->isi_materi }}</p>
+                         {{-- <p>{{ $kelas->isi_materi }}</p> --}}
                       </div>
                    </div>
                 </div>

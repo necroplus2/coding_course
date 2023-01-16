@@ -15,8 +15,9 @@ class ModuleController extends Controller
     public function __construct() 
     {
         $this->middleware('auth');
-        $this->middleware('is.admin');
+        $this->middleware('is.admin.menthor');
         $this->middleware('is.menthor')->only('edit');
+
     }
 
     /**
@@ -26,15 +27,28 @@ class ModuleController extends Controller
      */
     public function index()
     {
-        $module = DB::table('modules')
-            ->join('categories', 'modules.kategori_id', '=', 'categories.id')
-            ->join('users', 'modules.menthor_id', '=', 'users.id')
-            ->select('modules.*', 'categories.nama_kategori', 'users.nama_lengkap')
-            ->get();
+        $module = '';
+        if(auth()->user()->status == 'menthor') {
+            $module = DB::table('modules')
+                ->join('categories', 'modules.kategori_id', '=', 'categories.id')
+                ->join('users', 'modules.menthor_id', '=', 'users.id')
+                ->select('modules.*', 'categories.nama_kategori', 'users.nama_lengkap')
+                ->where([
+                    ['status', '=', 'menthor'],
+                    ['users.id', '=', auth()->user()->id]
+                ])
+                ->get();
+        } else if(auth()->user()->status == 'administrator') {
+            $module = DB::table('modules')
+                ->join('categories', 'modules.kategori_id', '=', 'categories.id')
+                ->join('users', 'modules.menthor_id', '=', 'users.id')
+                ->select('modules.*', 'categories.nama_kategori', 'users.nama_lengkap')
+                ->get();
+        }
 
         return view('dashboard.kelas.index', [
             // 'kelass' => Module::all(),
-            'kelass' => $module
+            'kelass' => $module,
         ]);
     }
 
@@ -61,7 +75,6 @@ class ModuleController extends Controller
     {
         $arrKelas = $request->validate([
             'judul_kelas' => 'required',
-            'isi_materi' => 'required',
             'kategori_id' => 'required',
             'menthor_id' => 'required'
         ]);
@@ -110,9 +123,7 @@ class ModuleController extends Controller
     {
         $arrKelas = $request->validate([
             'judul_kelas' => 'required',
-            'isi_materi' => 'required',
             'kategori_id' => 'required',
-            'menthor_id' => 'required'
         ]);
 
         Module::where('id', $module->id)->update($arrKelas);

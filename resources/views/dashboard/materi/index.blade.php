@@ -9,40 +9,37 @@
                   <div class="row bg-light p-3">
                     <div class="col-md-12">
 
-                      <h4 class="mb-3">Kelas Saat Ini</h4>
-                      
-                      @if(auth()->user()->status == 'administrator')
-                      <a href="/dashboard/module/create" class="btn btn-primary">Tambah Data</a>
-                      @endif
+                      <h4 class="mb-3">Materi Saat Ini</h4>
+  
+                      <a href="/dashboard/content/create" class="btn btn-primary">Tambah Data</a>
 
                       <div class="table-responsive table--no-card m-b-30 mt-3">
                         <table class="table table-borderless table-striped table-earning">
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Judul Kelas</th>
-                                    <th>Kategori</th>
-                                    <th>Menthor</th>
+                                    <th>Bab</th>
+                                    <th>Sub Bab</th>
+                                    <th>Kelas</th>
                                     <th>Opsi</th>
                                 </tr>
                             </thead>
                             <tbody>
-                              @foreach($kelass as $kelas)
+                              @foreach($contents as $content)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $kelas->judul_kelas }}</td>
-                                    <td>{{ $kelas->nama_kategori }}</td>
-                                    <td>{{ $kelas->nama_lengkap }}</td>
+                                    <td>{{ $content->bab }}</td>
+                                    <td>{{ $content->sub_bab }}</td>
+                                    <td>{{ $content->kelas_id }}</td>
                                     <td>
-                                      <a href="/dashboard/module/{{ $kelas->id }}/edit" class="btn btn-warning btn-sm">Edit</a>
-                                      
-                                      @if(auth()->user()->status == 'administrator')
-                                      <form action="/dashboard/module/{{ $kelas->id }}" method="post" style="display: inline">
+
+                                      <a href="/dashboard/content/{{ $content->id }}/edit" class="btn btn-warning btn-sm">Edit</a>
+
+                                      <form action="/dashboard/content/{{ $content->id }}" method="post" style="display: inline">
                                         @csrf
                                         @method('delete')
                                         <button type="submit" class="btn btn-outline-danger btn-sm" onclick="confirm('Yakin Menghapus ?')">Delete</button>
                                       </form>
-                                      @endif
 
                                     </td>
                                 </tr>

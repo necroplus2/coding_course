@@ -3,12 +3,15 @@
 use App\Models\Kelas;
 use App\Models\Module;
 use App\Models\Kategori;
+use App\Models\KnowledgeContent;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\KelasController;
+use App\Http\Controllers\CookieController;
 use App\Http\Controllers\ModuleController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\KnowledgeContentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,7 +50,7 @@ Route::get('/kelas', function() {
 // Route DASHBOARD
 Route::get('/dashboard', function() {
     return view('dashboard.index');
-})->middleware('auth')->middleware('is.admin');
+})->middleware('auth')->middleware('is.admin.menthor');
 // End Route DASHBOARD
 
 // Route DASHBOARD KELAS
@@ -56,8 +59,12 @@ Route::resource('/dashboard/module', ModuleController::class);
 // End Route DASHBOARD KELAS
 
 // Route DASHBOARD KATEGORI
-Route::resource('/dashboard/category', CategoryController::class)->middleware('auth')->middleware('is.admin');
+Route::resource('/dashboard/category', CategoryController::class)->middleware('auth')->middleware('is.admin.menthor');
 // End Route DASHBOARD KATEGORI
+
+// Route DASHBOARD MATERI
+Route::resource('/dashboard/content', KnowledgeContentController::class)->middleware('auth')->middleware('is.admin.menthor');
+// End Route DASHBOARD MATERI
 
 // Route MASUK
 Route::get('/masuk', function() {
@@ -78,3 +85,7 @@ Route::post('/daftar', [UserController::class, 'daftar']);
 // End Route DAFTAR
 
 Route::get('/blog/{module:id}', [ModuleController::class, 'show']);
+
+
+// Route::get('/setcookie', [CookieController::class, 'setCookie']);
+// Route::get('/getcookie', [CookieController::class, 'getCookie']);

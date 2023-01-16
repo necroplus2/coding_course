@@ -29,11 +29,6 @@
                                 <input id="cc-pament" name="judul_kelas" type="text" class="form-control" value="{{ $kelas->judul_kelas }}">
                             </div>
 
-                            <div class="form-group">
-                                <label for="cc-payment" class="control-label mb-1">Materi</label>
-                                <textarea class="form-control" id="materi" name="isi_materi">{{ $kelas->isi_materi }}</textarea>
-                            </div>
-
                             <div class="row form-group">
                                 <div class="col-12 col-md-12">
                                     <label for="cc-payment" class="control-label mb-1">Kategori</label>
@@ -46,6 +41,7 @@
                                 </div>
                             </div>
 
+                            @if(auth()->user()->status == 'administrator')
                             <div class="row form-group">
                                 <div class="col-12 col-md-12">
                                     <label for="cc-payment" class="control-label mb-1">Menthor</label>
@@ -57,6 +53,7 @@
                                     </select>
                                 </div>
                             </div>
+                            @endif
 
 
 

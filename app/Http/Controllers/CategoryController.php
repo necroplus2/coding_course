@@ -86,10 +86,8 @@ class CategoryController extends Controller
         $arrKategori = $request->validate([
             'nama_kategori' => 'required'
         ]);
-        $url = URL::current();
-        $id = Str::substr($url,41,3);
 
-        Category::where('id', $id)->update($arrKategori);
+        Category::where('id', $category->id)->update($arrKategori);
 
         return redirect('/dashboard/category');
     }
