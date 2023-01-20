@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('knowledge_contents', function (Blueprint $table) {
             $table->id();
+            $table->string('judul');
             $table->integer('bab');
             $table->integer('sub_bab');
             $table->longText('isi');

@@ -12,6 +12,7 @@ use App\Http\Controllers\ModuleController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\KnowledgeContentController;
+use App\Http\Controllers\PageMateriController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,19 +34,31 @@ Route::get('/home', function() {
 });
 // End Route HOME
 
+// Route MATERI
+Route::get('/materi/{knowledge_content:id}', [PageMateriController::class, 'index']);
+// End Route MATERI
+
+// Route KELAS
+Route::get('/kelas', function() {
+    return view('course.kelas', [
+        'kelass' => \App\Models\Module::paginate(4)->withQueryString(),
+    ]);
+});
+// End Route KELAS
+
 // Route ABOUT
 Route::get('/about', function() {
     return view('course.about');
 });
 // End Route ABOUT
 
-// Route KELAS
-Route::get('/kelas', function() {
-    return view('course.kelas', [
-        'kelas' => Module::all()
-    ]);
-});
-// End Route KELAS
+// // Route KELAS
+// Route::get('/kelas', function() {
+//     return view('course.kelas', [
+//         'kelas' => Module::all()
+//     ]);
+// });
+// // End Route KELAS
 
 // Route DASHBOARD
 Route::get('/dashboard', function() {

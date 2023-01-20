@@ -1,39 +1,47 @@
+{{-- @dd($kelass) --}}
 @extends('course.layout.template')
 
 @section('container')
-    <div class="Marketing-bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="Marketingheading">
-                        <h3>KELAS</h3>
+    <div class="container">
+        <div class="main-content">
+            <!-- Category Archive
+                    ================================================== -->
+            <section class="recent-posts row">
+                <div class="col-sm-12">
+                    <div class="section-title">
+                        <h2><span>Kumpulan Kelas dan Stack Technology</span></h2>
+                    </div>
+                    <div class="masonrygrid row listrecent">
+                        @foreach($kelass as $kelas)
+                        <!-- begin post -->
+                        <div class="col-md-6 grid-item">
+                            <div class="card">
+                                <a href="single.html">
+                                    <img class="img-fluid" src="{{ asset('images/course/' . mt_rand(1,4) . '.jpg') }}" alt="Tree of Codes">
+                                </a>
+                                <div class="card-block">
+                                    <h2 class="card-title"><a href="single.html">{{ $kelas->judul_kelas }}</a></h2>
+                                    <h4 class="card-text">The first mass-produced book to deviate from a
+                                        rectilinear format, at least in the United States, is thought to be this
+                                        1863 edition of Red Riding Hood, cut into the...</h4>
+                                    <div class="metafooter">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+                        <!-- end post -->
+                    </div>
+                    <!-- Pagination -->
+                    <div class="bottompagination">
+                        <div class="navigation">
+                            {{ $kelass->links() }}
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     </div>
-
-    <!-- section -->
-    <div class="section layout_padding">
-        <div class="container">
-
-         @foreach($kelas as $kls)
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="full blog_cont">
-                        <a href="/blog/{{ $kls->id }}"><h4>{{ $kls->judul_kelas }}</h3></a>
-                        <h5>{{ $kls->created_at }}</h5>
-                        <p>{{ $kls->isi_materi }}</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <img src="images/course/marketing_img.png" alt="#" />
-                </div>
-
-            </div>
-         @endforeach
-
-        </div>
+    <!-- /.container -->
     </div>
-    <!-- end section -->
 @endsection

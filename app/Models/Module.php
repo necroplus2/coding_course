@@ -13,6 +13,10 @@ class Module extends Model
         'id'
     ];
 
+    public function contents() {
+        return $this->hasMany(KnowledgeContent::class, 'kelas_id');
+    }
+
     public function category() {
         return $this->belongsTo(Category::class);
     }
