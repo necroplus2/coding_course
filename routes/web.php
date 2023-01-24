@@ -1,18 +1,11 @@
 <?php
 
-use App\Models\Kelas;
-use App\Models\Module;
-use App\Models\Kategori;
-use App\Models\KnowledgeContent;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\KelasController;
-use App\Http\Controllers\CookieController;
 use App\Http\Controllers\ModuleController;
 use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\PageContentController;
 use App\Http\Controllers\KnowledgeContentController;
-use App\Http\Controllers\PageMateriController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +28,7 @@ Route::get('/home', function() {
 // End Route HOME
 
 // Route MATERI
-Route::get('/materi/{knowledge_content:id}', [PageMateriController::class, 'index']);
+Route::get('/materi/{knowledge_content:id}', [PageContentController::class, 'index']);
 // End Route MATERI
 
 // Route KELAS

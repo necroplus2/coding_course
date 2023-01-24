@@ -3,18 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\Module;
+use App\Models\Chapter;
 use Illuminate\Http\Request;
 use App\Models\KnowledgeContent;
 
-class PageMateriController extends Controller
+class PageContentController extends Controller
 {
     public function index(KnowledgeContent $knowledge_content)
     {
         return view('course.materi', [
             // 'materi' => $module,
-            'current_bab' => $knowledge_content->bab,
-            'current_sub_bab' => $knowledge_content->sub_bab,
-            'bab' => KnowledgeContent::where('sub_bab', 1)->get(),
+            'bab' => Chapter::all(),
             'sub_bab' => KnowledgeContent::all(),
         ]);
     }

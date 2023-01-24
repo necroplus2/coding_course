@@ -896,3 +896,11 @@ form .dropdown-item:active {
     border-radius: 0;
     color: black;
 }
+
+/* media query mobile */
+@media (max-width: 768px) {
+    .sidebar-right {
+        display: none;
+    }
+
+}

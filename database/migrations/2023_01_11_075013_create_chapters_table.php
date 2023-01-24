@@ -13,13 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('knowledge_contents', function (Blueprint $table) {
+        Schema::create('chapters', function (Blueprint $table) {
             $table->id();
-            $table->string('judul');
-            $table->integer('sub_bab');
-            $table->longText('isi');
-            $table->unsignedBigInteger('bab_id');
-            $table->foreign('bab_id')->references('id')->on('chapters');
+            $table->string('nama_bab');
+            $table->unsignedBigInteger('kelas_id');
+            $table->foreign('kelas_id')->references('id')->on('modules');
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('knowledge_contents');
+        Schema::dropIfExists('chapters');
     }
 };

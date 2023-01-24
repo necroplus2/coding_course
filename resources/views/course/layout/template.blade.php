@@ -11,9 +11,14 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i" rel="stylesheet">
     <link href="{{ asset('css/course/theme.css') }}" rel="stylesheet">
+    {{-- font awesome 5--}}
+    <link rel="stylesheet" href="{{ asset('vendor/font-awesome-5/css/fontawesome-all.min.css') }}">
     <!-- Begin tracking codes here, including ShareThis/Analytics -->
 
     <!-- End tracking codes here, including ShareThis/Analytics -->
+    {{-- jquery --}}
+    <script src="{{ asset('js/course/jquery.min.js') }}"></script>
+
 </head>
 
 <body class="layout-default">
@@ -27,7 +32,6 @@
     @include('course.layout.footer')
     <!-- JavaScript
 ================================================== -->
-    <script src="{{ asset('js/course/jquery.min.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
         integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous">
     </script>

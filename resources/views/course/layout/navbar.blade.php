@@ -38,7 +38,7 @@
                                 <div class="dropdown-divider"></div>
                                 <form action="/logout" method="post">
                                     @csrf
-                                    <button type="submit" class="dropdown-item" style="cursor: pointer">logout</button>
+                                    <button type="submit" class="dropdown-item" style="cursor: pointer">Logout</button>
                                 </form>
                             </div>
                         </li>

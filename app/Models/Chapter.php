@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class KnowledgeContent extends Model
+class Chapter extends Model
 {
     use HasFactory;
 
@@ -13,7 +13,7 @@ class KnowledgeContent extends Model
         'id'
     ];
 
-    public function chapter() {
-        return $this->belongsTo(Chapter::class);
+    public function contents() {
+        return $this->hasMany(KnowledgeContent::class);
     }
 }
