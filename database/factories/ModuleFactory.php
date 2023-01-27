@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use Illuminate\Support\Arr;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -30,9 +31,16 @@ class ModuleFactory extends Factory
             'Database NoSQL'
         ];
 
+        $arrKategori = [
+            1674749723010,
+            1674749662010,
+            1674749468010
+        ];
+
         return [
             'judul_kelas' => $arrKelas[mt_rand(0,9)],
-            'kategori_id' => mt_rand(1,3),
+            'kategori_id' => $arrKategori[mt_rand(0,2)],
+            'deskripsi' => Arr::join ( fake()->paragraphs(5, false), '</p><p>' ),
             'menthor_id' => mt_rand(2,4)
         ];
     }

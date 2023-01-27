@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ModuleController;
 use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\PageContentController;
+use App\Http\Controllers\CustomFuncController;
+use App\Http\Controllers\EffortController;
+use App\Http\Controllers\PageModuleController;
 use App\Http\Controllers\KnowledgeContentController;
 
 /*
@@ -28,7 +30,7 @@ Route::get('/home', function() {
 // End Route HOME
 
 // Route MATERI
-Route::get('/materi/{knowledge_content:id}', [PageContentController::class, 'index']);
+Route::get('/materi/{knowledge_content:id}', [PageModuleController::class, 'index']);
 // End Route MATERI
 
 // Route KELAS
@@ -89,6 +91,14 @@ Route::get('/daftar', function() {
 })->middleware('guest');
 Route::post('/daftar', [UserController::class, 'daftar']);
 // End Route DAFTAR
+
+// Route DASBOR / user
+Route::get('/dasbor', [EffortController::class, 'userEffort']);
+// Route End DASBOR
+
+// Route Deskripsi KELAS
+Route::get('/{module:id}', [PageModuleController::class, 'description_module']);
+// Route End Deskripsi KELAS
 
 Route::get('/blog/{module:id}', [ModuleController::class, 'show']);
 

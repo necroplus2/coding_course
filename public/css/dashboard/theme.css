@@ -225,7 +225,9 @@ a:active {
 }
 
 a:hover,
-a {
+a,
+button:hover,
+button {
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -1530,19 +1532,19 @@ section {
     right: 33px;
 }
 
-.account-dropdown__item a {
+.account-dropdown__item a, .account-dropdown__item button {
     display: block;
     color: #333;
     padding: 15px 25px;
     font-size: 14px;
 }
 
-.account-dropdown__item a:hover {
+.account-dropdown__item a:hover, .account-dropdown__item button:hover {
     background: #4272d7;
     color: #fff;
 }
 
-.account-dropdown__item a i {
+.account-dropdown__item a i, .account-dropdown__item button i {
     line-height: 1;
     margin-right: 20px;
     font-size: 18px;

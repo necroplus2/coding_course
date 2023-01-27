@@ -33,7 +33,11 @@
                                 data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">{{ auth()->user()->username }}</a>
                             <div class="dropdown-menu" aria-labelledby="dropdown01">
-                                <a class="dropdown-item" href="#">Dasbor</a>
+                                @if (auth()->user()->status == 'user')
+                                    <a class="dropdown-item" href="/dasbor">Dasbor</a>
+                                @elseif(auth()->user()->status == 'administrator' || auth()->user()->status == 'menthor')
+                                    <a class="dropdown-item" href="/dashboard">Dashboard</a>
+                                @endif
                                 <a class="dropdown-item" href="#">Akun</a>
                                 <div class="dropdown-divider"></div>
                                 <form action="/logout" method="post">

@@ -15,12 +15,12 @@
                 <div class="card-body px-4">
                     <ul class="">
                         @foreach ($sub_bab as $sb)
-                        @if ($sb->bab_id == $b->id)
-                            <a href="" class="p-1">
-                                <li type="1">
-                                    {{ $sb->judul }}
-                                </li>
-                            </a>
+                            @if ($sb->bab_id == $b->id)
+                                <a href="" class="p-1">
+                                    <li type="1">
+                                        {{ $sb->judul }}
+                                    </li>
+                                </a>
                             @endif
                         @endforeach
                     </ul>

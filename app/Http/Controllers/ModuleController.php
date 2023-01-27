@@ -7,6 +7,7 @@ use App\Models\Module;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\CustomFuncController;
 // use App\Http\Requests\StoreModuleRequest;
 // use App\Http\Requests\UpdateModuleRequest;
 
@@ -27,6 +28,9 @@ class ModuleController extends Controller
      */
     public function index()
     {
+        // $cus = new CustomFuncController;
+        // dd($cus->customid());
+
         $module = '';
         if(auth()->user()->status == 'menthor') {
             $module = DB::table('modules')

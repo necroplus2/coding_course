@@ -11,10 +11,16 @@
 <!-- End Sidebar -->
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary fixed-bottom btnModal" data-toggle="modal" data-target="#exampleModalLong"
-    style="display: none">
+<div class="col-lg-12 d-flex flex-row fixed-bottom justify-content-center btnModal">
+    <button class="w-25 btn btn-danger" style="border-radius: 0 !important">Previous</button>
+    <button type="button" class="w-50 btn btn-primary rounded-0" data-toggle="modal" data-target="#exampleModalLong" style="border-radius: 0 !important">
+        <i class="fa fa-th-list"></i>
+    </button>
+        <button class="w-25 btn btn-danger" style="border-radius: 0 !important">Next</button>
+</div>
+{{-- <button type="button" class="btn btn-primary fixed-bottom btnModal" data-toggle="modal" data-target="#exampleModalLong" style="display: none">
     <i class="fa fa-th-list"></i>
-</button>
+</button> --}}
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"

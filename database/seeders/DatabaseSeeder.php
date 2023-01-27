@@ -60,12 +60,15 @@ class DatabaseSeeder extends Seeder
         ]);
 
         \App\Models\Category::create([
+            'id' => 1674749723010,
             'nama_kategori' => 'Programming'
         ]);
         \App\Models\Category::create([
+            'id' => 1674749662010,
             'nama_kategori' => 'Design UI/UX'
         ]);
         \App\Models\Category::create([
+            'id' => 1674749468010,
             'nama_kategori' => 'Database'
         ]);
 

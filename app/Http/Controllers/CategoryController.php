@@ -17,6 +17,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
+        // $cus = new CustomFuncController;
+        // dd($cus->customid());
+
         return view('dashboard.kategori.index', [
             'kategoris' => Category::all()
         ]);
@@ -29,6 +32,9 @@ class CategoryController extends Controller
      */
     public function create()
     {
+        // $cus = new CustomFuncController;
+        // dd($cus->customid());
+
         return view('dashboard.kategori.tambah');
     }
 
@@ -45,7 +51,12 @@ class CategoryController extends Controller
             'nama_kategori' => 'required'
         ]);
 
-        Category::create($arrKategori);
+        $myFunc = new CustomFuncController;
+        
+        Category::create([
+            'id' => $myFunc->customid(),
+            'nama_kategori' => $arrKategori['nama_kategori']
+        ]);
 
         return redirect('/dashboard/category');
     }

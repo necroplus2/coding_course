@@ -26,7 +26,6 @@
     
     <div class="site-content">
         @yield('container')
-
     </div>
 
     @include('course.layout.footer')
