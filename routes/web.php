@@ -1,11 +1,13 @@
 <?php
 
+use App\Models\Module;
+use App\Models\KnowledgeContent;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\EffortController;
 use App\Http\Controllers\ModuleController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomFuncController;
-use App\Http\Controllers\EffortController;
 use App\Http\Controllers\PageModuleController;
 use App\Http\Controllers\KnowledgeContentController;
 
@@ -30,7 +32,10 @@ Route::get('/home', function() {
 // End Route HOME
 
 // Route MATERI
-Route::get('/materi/{knowledge_content:id}', [PageModuleController::class, 'index']);
+// Route::get('/materi/{knowledge_content:id}', [PageModuleController::class, 'index']);
+// End Route MATERI
+// Route MATERI
+Route::get('/{module}/content/{knowledge_content}', [PageModuleController::class, 'index']);
 // End Route MATERI
 
 // Route KELAS
@@ -97,10 +102,10 @@ Route::get('/dasbor', [EffortController::class, 'userEffort']);
 // Route End DASBOR
 
 // Route Deskripsi KELAS
-Route::get('/{module:id}', [PageModuleController::class, 'description_module']);
+Route::get('/kelas/{module:id}', [PageModuleController::class, 'description_module']);
 // Route End Deskripsi KELAS
 
-Route::get('/blog/{module:id}', [ModuleController::class, 'show']);
+// Route::get('/blog/{module:id}', [ModuleController::class, 'show']);
 
 
 // Route::get('/setcookie', [CookieController::class, 'setCookie']);

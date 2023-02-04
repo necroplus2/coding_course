@@ -402,7 +402,7 @@
                                             <td>
                                                 <span class="block-email">Done</span>
                                             </td>
-                                            <td class="desc">80</td>
+                                            <td class="desc">{{ $kelas->presentase }}</td>
                                             <td><a href="" class="btn btn-primary btn-sm">Lanjut Baca</a></td>
                                         </tr>
                                         <tr class="spacer"></tr>

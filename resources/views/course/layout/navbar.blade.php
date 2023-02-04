@@ -7,8 +7,9 @@
         </button>
         <div class="container">
             <!-- Begin Logo -->
-            <a class="navbar-brand" href="index.html">
-                <img src="{{ asset('images/course/logo.png') }}" alt="Affiliates - Free Bootstrap Template">
+            <a class="navbar-brand" href="/">
+                {{-- <img src="{{ asset('images/course/logo.png') }}" alt="Affiliates - Free Bootstrap Template"> --}}
+                ini logo
             </a>
             <!-- End Logo -->
             <!-- Begin Menu -->
@@ -16,7 +17,7 @@
                 <!-- Begin Menu -->
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/kelas">Kelas</a>

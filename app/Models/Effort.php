@@ -9,6 +9,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Effort extends Model
 {
+
+    protected $guarded = [
+        'id'
+    ];
+
     use HasFactory;
 
     public function user() {

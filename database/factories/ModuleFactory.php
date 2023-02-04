@@ -40,7 +40,7 @@ class ModuleFactory extends Factory
         return [
             'judul_kelas' => $arrKelas[mt_rand(0,9)],
             'kategori_id' => $arrKategori[mt_rand(0,2)],
-            'deskripsi' => Arr::join ( fake()->paragraphs(5, false), '</p><p>' ),
+            'deskripsi' => '<p>' . Arr::join ( fake()->paragraphs(5, false), '</p><p>' ) . '</p>',
             'menthor_id' => mt_rand(2,4)
         ];
     }

@@ -10,21 +10,23 @@ use App\Models\KnowledgeContent;
 
 class PageModuleController extends Controller
 {
-    public function index(KnowledgeContent $knowledge_content)
+    public function index(Module $module, KnowledgeContent $knowledge_content)
     {
-        $bab = Module::find(Str::substr(request()->path(),7))->chapters;
+        // $bab = Module::find(Str::substr(request()->path(),7))->chapters;
         // dd(Str::substr(request()->path(),7));
         return view('course.materi', [
             // 'materi' => $module,
-            'bab' => $bab,
+            // 'bab' => $bab,
             'sub_bab' => KnowledgeContent::all(),
+            'content' => $knowledge_content
         ]);
     }
 
-    public function description_module() 
+    public function description_module(Module $module)
     {
-        $bab = Module::find(request()->path())->chapters;
+        $bab = Module::find(Str::substr(request()->path(), 6))->chapters;
         return view('course.desk_kelas', [
+            'module' => $module,
             'bab' => $bab
         ]);
     }

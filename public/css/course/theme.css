@@ -78,7 +78,7 @@ section.recent-posts {
     position: relative;
     z-index: 2;
     display: inline-block;
-    padding: 0px 15px 0 0;
+    padding: 0px 15px 0 15px;
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -903,4 +903,8 @@ form .dropdown-item:active {
         display: none;
     }
 
+}
+
+.swiper {
+    overflow: hidden;
 }
