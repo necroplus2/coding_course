@@ -76,10 +76,12 @@ class DatabaseSeeder extends Seeder
         \App\Models\Module::factory(10)->create();
 
         \App\Models\Chapter::create([
+            'bab' => 1,
             'nama_bab' => 'HTML',
             'kelas_id' => 1
         ]);
         \App\Models\Chapter::create([
+            'bab' => 2,
             'nama_bab' => 'CSS',
             'kelas_id' => 1
         ]);
@@ -113,21 +115,25 @@ class DatabaseSeeder extends Seeder
             'user_id' => 5,
             'kelas_id' => 1,
             'presentase' => 40,
+            'last_subbab' => 1
         ]);
         \App\Models\Effort::create([
             'user_id' => 5,
             'kelas_id' => 2,
             'presentase' => 50,
+            'last_subbab' => 2
         ]);
         \App\Models\Effort::create([
             'user_id' => 5,
             'kelas_id' => 3,
             'presentase' => 60,
+            'last_subbab' => 1
         ]);
         \App\Models\Effort::create([
             'user_id' => 3,
             'kelas_id' => 4,
             'presentase' => 10,
+            'last_subbab' => 1
         ]);
         // \App\Models\User::factory(3)->create();
     }

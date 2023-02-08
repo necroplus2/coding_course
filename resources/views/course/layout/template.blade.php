@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <link rel="icon" href="{{ asset('images/course/favicon.ico') }}">
     <title>Affiliates | HTML Bootstrap Template</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
@@ -28,7 +30,11 @@
         @yield('container')
     </div>
 
-    @include('course.layout.footer')
+    @if(Request::is('module*'))
+    
+    @else
+        @include('course.layout.footer')
+    @endif
     <!-- JavaScript
 ================================================== -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"

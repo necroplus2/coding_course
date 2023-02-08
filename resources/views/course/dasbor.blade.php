@@ -403,7 +403,7 @@
                                                 <span class="block-email">Done</span>
                                             </td>
                                             <td class="desc">{{ $kelas->presentase }}</td>
-                                            <td><a href="" class="btn btn-primary btn-sm">Lanjut Baca</a></td>
+                                            <td><a href="/module/{{ $kelas->kelas_id }}/content/{{ $kelas->last_subbab }}" class="btn btn-primary btn-sm">Lanjut Baca</a></td>
                                         </tr>
                                         <tr class="spacer"></tr>
                                         @endforeach

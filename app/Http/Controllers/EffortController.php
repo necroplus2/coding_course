@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Effort;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use App\Http\Requests\StoreEffortRequest;
 use App\Http\Requests\UpdateEffortRequest;
+
 
 class EffortController extends Controller
 {
@@ -95,4 +98,22 @@ class EffortController extends Controller
             'myKelas' => $myKelas,
         ]);
     }
+
+    public function next_content() {
+        $request = new Request();
+        // dd($request);
+        // $response = array(
+        //     'status' => 'success',
+        //     'msg'    => 'Setting created successfully',
+        // );
+    
+        // return Response::json($response);
+
+        if($request->ajax()) {
+            return Response::json($request->all());
+        }
+
+    }
+
+
 }

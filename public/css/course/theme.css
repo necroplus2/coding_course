@@ -905,6 +905,6 @@ form .dropdown-item:active {
 
 }
 
-.swiper {
+.swiper, .cardSwiper {
     overflow: hidden;
 }

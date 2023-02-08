@@ -1,4 +1,4 @@
-{{-- @foreach ($bab as $b)
+@foreach ($bab as $b)
     <div id="accordion7261{{ $b->id }}">
         <div class="card">
             <div class="card-header" id="headingBab7261{{ $b->id }}">
@@ -28,4 +28,4 @@
             </div>
         </div>
     </div>
-@endforeach --}}
+@endforeach

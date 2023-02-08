@@ -35,7 +35,7 @@ Route::get('/home', function() {
 // Route::get('/materi/{knowledge_content:id}', [PageModuleController::class, 'index']);
 // End Route MATERI
 // Route MATERI
-Route::get('/{module}/content/{knowledge_content}', [PageModuleController::class, 'index']);
+Route::get('/module/{module}/content/{knowledge_content}', [PageModuleController::class, 'index']);
 // End Route MATERI
 
 // Route KELAS
@@ -104,6 +104,10 @@ Route::get('/dasbor', [EffortController::class, 'userEffort']);
 // Route Deskripsi KELAS
 Route::get('/kelas/{module:id}', [PageModuleController::class, 'description_module']);
 // Route End Deskripsi KELAS
+
+// Route Next Content/sub bab for Efforts Table
+Route::post('/module/next', [EffortController::class, 'next_content']);
+// end
 
 // Route::get('/blog/{module:id}', [ModuleController::class, 'show']);
 
